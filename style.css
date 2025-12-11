@@ -230,6 +230,22 @@ a {
   box-shadow: var(--shadow);
 }
 
+.fleet-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fleet-image {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #0d111a;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .highlight {
   border-color: rgba(211, 47, 47, 0.4);
   background: linear-gradient(140deg, rgba(211, 47, 47, 0.09), rgba(17, 21, 34, 0.9));
