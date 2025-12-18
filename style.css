@@ -20,6 +20,7 @@
 
 body {
   margin: 0;
+
   background: radial-gradient(circle at 20% 20%, rgba(211, 47, 47, 0.08), transparent 32%),
     radial-gradient(circle at 78% 8%, rgba(74, 144, 226, 0.12), transparent 30%),
     var(--bg);
@@ -117,6 +118,7 @@ a {
   font-size: clamp(34px, 5vw, 52px);
   margin: 10px 0 16px;
   line-height: 1.05;
+  text-shadow: 0 10px 24px rgba(12, 23, 52, 0.15), 0 1px 0 #ffffff;
 }
 
 .kicker {
@@ -213,6 +215,7 @@ a {
   margin: 8px 0;
   font-size: 30px;
   font-family: 'Playfair Display', 'Inter', serif;
+  text-shadow: 0 8px 22px rgba(12, 23, 52, 0.14), 0 1px 0 #ffffff;
 }
 
 .grid {
@@ -352,6 +355,88 @@ a {
 
 .contact-points li {
   margin: 6px 0;
+}
+
+.contact-person {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(12, 23, 52, 0.08);
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 20px rgba(12, 23, 52, 0.12);
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-header h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.role {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--pill);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.contact-details li {
+  display: flex;
+  gap: 8px;
+  color: var(--text);
+}
+
+.contact-details .label {
+  font-weight: 700;
+  color: var(--muted);
+  min-width: 80px;
+}
+
+.contact-note {
+  margin: 4px 0 0;
+  color: var(--muted);
 }
 
 .footer {
