@@ -1,7 +1,8 @@
 :root {
-  --bg: #c2c6d0;
-  --panel: #f8f9fc;
-  --panel-alt: #b7bcc6;
+
+  --bg: #d6d8df;
+  --panel: #ffffff;
+  --panel-alt: #cfd3db;
   --accent: #d32f2f;
   --text: #1c2433;
   --muted: #5f6b85;
