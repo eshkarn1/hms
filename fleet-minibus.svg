@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">HMS Mini Bus</title>
+  <desc id="desc">Illustration of an HMS-branded mini bus with windows and dual axles.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ecf1fa" />
+      <stop offset="100%" stop-color="#d3dae8" />
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d1d5df" />
+      <stop offset="100%" stop-color="#b4bccb" />
+    </linearGradient>
+    <filter id="shadow" x="-0.1" y="-0.1" width="1.2" height="1.2">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/>
+      <feOffset in="blur" dx="0" dy="7" result="offset"/>
+      <feMerge>
+        <feMergeNode in="offset"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)" />
+  <rect y="780" width="1600" height="420" fill="url(#road)" />
+  <g filter="url(#shadow)">
+    <path d="M180 700 Q190 640 250 620 L1350 600 Q1410 600 1430 640 Q1450 680 1450 740 L1450 840 Q1450 880 1415 900 L260 930 Q210 920 190 885 Q170 850 170 800 L170 740 Q170 710 180 700 Z" fill="#0f151f" />
+    <rect x="260" y="650" width="1000" height="160" rx="18" fill="#1d2434" />
+    <rect x="260" y="620" width="1020" height="70" rx="12" fill="#171d29" />
+    <rect x="310" y="650" width="140" height="130" rx="12" fill="#0b101a" />
+    <rect x="470" y="650" width="140" height="130" rx="12" fill="#0b101a" />
+    <rect x="630" y="650" width="140" height="130" rx="12" fill="#0b101a" />
+    <rect x="790" y="650" width="140" height="130" rx="12" fill="#0b101a" />
+    <rect x="950" y="650" width="140" height="130" rx="12" fill="#0b101a" />
+    <rect x="1110" y="650" width="170" height="130" rx="12" fill="#0b101a" />
+    <rect x="260" y="710" width="1000" height="20" fill="#c2292e" />
+    <circle cx="380" cy="900" r="76" fill="#090d16" />
+    <circle cx="380" cy="900" r="48" fill="#2b3243" />
+    <circle cx="380" cy="900" r="18" fill="#e8eef7" />
+    <circle cx="1220" cy="900" r="76" fill="#090d16" />
+    <circle cx="1220" cy="900" r="48" fill="#2b3243" />
+    <circle cx="1220" cy="900" r="18" fill="#e8eef7" />
+    <circle cx="930" cy="900" r="64" fill="#0c111c" />
+    <circle cx="930" cy="900" r="40" fill="#2b3243" />
+    <circle cx="930" cy="900" r="16" fill="#e8eef7" />
+    <image href="logo.png" x="460" y="690" width="360" height="360" preserveAspectRatio="xMidYMid meet" opacity="0.95" />
+    <text x="830" y="830" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="96" fill="#ffffff" font-weight="700">HMS</text>
+    <text x="830" y="890" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="34" fill="#ffffff" letter-spacing="2">HIGH-MILES SOLUTIONS</text>
+  </g>
+  <text x="90" y="180" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="42" fill="#182033" font-weight="600">Mini Buses</text>
+  <text x="90" y="240" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#4b5568">Illustration of our mid-size bus option.</text>
+</svg>

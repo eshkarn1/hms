@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">HMS Coach Bus</title>
+  <desc id="desc">Illustration of an HMS-branded full-size coach bus.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7edf7" />
+      <stop offset="100%" stop-color="#ccd4e4" />
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cfd4de" />
+      <stop offset="100%" stop-color="#b2b9c8" />
+    </linearGradient>
+    <filter id="shadow" x="-0.1" y="-0.1" width="1.2" height="1.2">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset in="blur" dx="0" dy="8" result="offset"/>
+      <feMerge>
+        <feMergeNode in="offset"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)" />
+  <rect y="800" width="1600" height="400" fill="url(#road)" />
+  <g filter="url(#shadow)">
+    <path d="M140 700 Q160 640 230 620 L1420 600 Q1480 600 1505 640 Q1530 680 1530 730 L1530 850 Q1530 900 1480 920 L240 950 Q180 940 150 890 Q130 850 130 800 L130 740 Q130 710 140 700 Z" fill="#0d121c" />
+    <rect x="230" y="650" width="1160" height="180" rx="20" fill="#1b2333" />
+    <rect x="230" y="620" width="1180" height="80" rx="14" fill="#161d2b" />
+    <rect x="270" y="660" width="150" height="150" rx="12" fill="#0a0f1a" />
+    <rect x="440" y="660" width="150" height="150" rx="12" fill="#0a0f1a" />
+    <rect x="610" y="660" width="150" height="150" rx="12" fill="#0a0f1a" />
+    <rect x="780" y="660" width="150" height="150" rx="12" fill="#0a0f1a" />
+    <rect x="950" y="660" width="150" height="150" rx="12" fill="#0a0f1a" />
+    <rect x="1120" y="660" width="150" height="150" rx="12" fill="#0a0f1a" />
+    <rect x="1290" y="660" width="90" height="150" rx="12" fill="#0a0f1a" />
+    <rect x="230" y="730" width="1160" height="22" fill="#c2292e" />
+    <circle cx="390" cy="930" r="78" fill="#080c14" />
+    <circle cx="390" cy="930" r="50" fill="#2a3141" />
+    <circle cx="390" cy="930" r="18" fill="#e7edf6" />
+    <circle cx="720" cy="930" r="66" fill="#090d16" />
+    <circle cx="720" cy="930" r="42" fill="#2a3141" />
+    <circle cx="720" cy="930" r="16" fill="#e7edf6" />
+    <circle cx="1120" cy="930" r="78" fill="#080c14" />
+    <circle cx="1120" cy="930" r="50" fill="#2a3141" />
+    <circle cx="1120" cy="930" r="18" fill="#e7edf6" />
+    <circle cx="1360" cy="930" r="64" fill="#090d16" />
+    <circle cx="1360" cy="930" r="40" fill="#2a3141" />
+    <circle cx="1360" cy="930" r="16" fill="#e7edf6" />
+    <image href="logo.png" x="520" y="690" width="360" height="360" preserveAspectRatio="xMidYMid meet" opacity="0.95" />
+    <text x="890" y="840" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="100" fill="#ffffff" font-weight="700">HMS</text>
+    <text x="890" y="900" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="36" fill="#ffffff" letter-spacing="2">HIGH-MILES SOLUTIONS</text>
+  </g>
+  <text x="90" y="180" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="42" fill="#182033" font-weight="600">Full-Size Coaches</text>
+  <text x="90" y="240" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#4b5568">Illustration of our luxury coach option.</text>
+</svg>
