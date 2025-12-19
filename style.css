@@ -1,4 +1,5 @@
 :root {
+
   --bg: #d6d8df;
   --panel: #ffffff;
   --panel-alt: #cfd3db;
@@ -21,11 +22,39 @@
 body {
   margin: 0;
 
-  background: radial-gradient(circle at 20% 20%, rgba(211, 47, 47, 0.08), transparent 32%),
-    radial-gradient(circle at 78% 8%, rgba(74, 144, 226, 0.12), transparent 30%),
-    var(--bg);
+  background: radial-gradient(circle at 20% 20%, rgba(211, 47, 47, 0.12), transparent 32%),
+    radial-gradient(circle at 78% 8%, rgba(74, 144, 226, 0.16), transparent 30%),
+    linear-gradient(135deg, #c2c6d0 0%, #cfd3dd 60%, #c2c6d0 100%);
   color: var(--text);
   line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', 'Inter', serif;
+  letter-spacing: 0.3px;
+  color: #0f1b2d;
+  text-shadow: 0 12px 34px rgba(12, 23, 52, 0.2), 0 2px 0 rgba(255, 255, 255, 0.8);
+}
+
+.panel-header h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  background: linear-gradient(120deg, #0f1b2d 0%, #213556 50%, #d32f2f 95%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.panel-header h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 82px;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(211, 47, 47, 0.9), rgba(74, 144, 226, 0.7));
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(12, 23, 52, 0.15);
 }
 
 .cta-row {
@@ -47,7 +76,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 14px 6vw;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(248, 249, 252, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 6px 18px rgba(12, 23, 52, 0.08);
@@ -103,6 +132,46 @@ a {
   background: var(--pill);
   color: var(--text);
   box-shadow: 0 10px 20px rgba(12, 23, 52, 0.12);
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: 0 10px 20px rgba(12, 23, 52, 0.1);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  position: relative;
+}
+
+.menu-toggle span::before,
+.menu-toggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-toggle span::before {
+  top: -6px;
+}
+
+.menu-toggle span::after {
+  top: 6px;
 }
 
 .hero {
@@ -238,6 +307,73 @@ a {
   border-radius: var(--radius);
   padding: 18px 20px;
   box-shadow: var(--shadow);
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100%;
+  background: var(--panel);
+  box-shadow: -8px 0 28px rgba(12, 23, 52, 0.18);
+  border-left: 1px solid var(--border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: right 0.25s ease;
+  z-index: 20;
+}
+
+.mobile-nav.open {
+  right: 0;
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.close-menu {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(12, 23, 52, 0.1);
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-links a {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--pill);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 20px rgba(12, 23, 52, 0.08);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 23, 52, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 15;
+}
+
+.backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .fleet-card {
@@ -455,13 +591,17 @@ a {
   font-size: 14px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
   .nav {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 10px;
+    display: none;
   }
 
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 720px) {
   .hero {
     padding-top: 60px;
   }
