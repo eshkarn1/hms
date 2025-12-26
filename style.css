@@ -285,6 +285,22 @@ a {
   font-size: 30px;
   font-family: 'Playfair Display', 'Inter', serif;
   text-shadow: 0 8px 22px rgba(12, 23, 52, 0.14), 0 1px 0 #ffffff;
+  background: linear-gradient(120deg, #0f172a, #d32f2f, #ff7a7a);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+.panel-header h2::after {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.8), rgba(211, 47, 47, 0.9));
+  margin-top: 10px;
+  box-shadow: 0 8px 18px rgba(211, 47, 47, 0.25);
 }
 
 .grid {
