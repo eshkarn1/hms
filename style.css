@@ -32,13 +32,9 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', 'Inter', serif;
   letter-spacing: 0.3px;
-  color: #000000;
-  font-weight: 800;
-  text-shadow: 0 14px 36px rgba(12, 23, 52, 0.25), 0 2px 0 rgba(255, 255, 255, 0.9);
-}
-
-h2, h3 {
-  font-style: italic;
+  color: #0f1b2d;
+  text-shadow: 0 12px 34px rgba(12, 23, 52, 0.2), 0 2px 0 rgba(255, 255, 255, 0.8);
+  font-style: normal;
 }
 
 .panel-header h2 {
