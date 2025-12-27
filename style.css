@@ -37,6 +37,10 @@ h1, h2, h3 {
   text-shadow: 0 14px 36px rgba(12, 23, 52, 0.25), 0 2px 0 rgba(255, 255, 255, 0.9);
 }
 
+h2, h3 {
+  font-style: italic;
+}
+
 .panel-header h2 {
   position: relative;
   display: inline-block;
