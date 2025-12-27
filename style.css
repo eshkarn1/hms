@@ -32,17 +32,22 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', 'Inter', serif;
   letter-spacing: 0.3px;
-  color: #0f1b2d;
-  text-shadow: 0 12px 34px rgba(12, 23, 52, 0.2), 0 2px 0 rgba(255, 255, 255, 0.8);
+  color: #000000;
+  font-weight: 800;
+  text-shadow: 0 14px 36px rgba(12, 23, 52, 0.25), 0 2px 0 rgba(255, 255, 255, 0.9);
+}
+
+h2, h3 {
+  font-style: italic;
 }
 
 .panel-header h2 {
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
-  background: linear-gradient(120deg, #0f1b2d 0%, #213556 50%, #d32f2f 95%);
-  -webkit-background-clip: text;
-  color: transparent;
+  background: none;
+  -webkit-background-clip: border-box;
+  color: #000000;
 }
 
 .panel-header h2::after {
@@ -284,10 +289,11 @@ a {
   margin: 8px 0;
   font-size: 30px;
   font-family: 'Playfair Display', 'Inter', serif;
-  text-shadow: 0 8px 22px rgba(12, 23, 52, 0.14), 0 1px 0 #ffffff;
-  background: linear-gradient(120deg, #0f172a, #d32f2f, #ff7a7a);
-  -webkit-background-clip: text;
-  color: transparent;
+  font-weight: 800;
+  text-shadow: 0 10px 24px rgba(12, 23, 52, 0.18), 0 1px 0 #ffffff;
+  background: none;
+  -webkit-background-clip: border-box;
+  color: #000000;
   display: inline-block;
   position: relative;
 }
@@ -596,15 +602,9 @@ a {
   background: #ffffff;
   border-top: 1px solid var(--border);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 16px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 14px;
-  font-size: 14px;
 }
 
 @media (max-width: 960px) {
