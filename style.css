@@ -41,9 +41,9 @@ h1, h2, h3 {
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
-  background: linear-gradient(120deg, #0f1b2d 0%, #213556 50%, #d32f2f 95%);
-  -webkit-background-clip: text;
-  color: transparent;
+  background: none;
+  -webkit-background-clip: border-box;
+  color: #000000;
 }
 
 .panel-header h2::after {
