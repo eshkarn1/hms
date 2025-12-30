@@ -11,12 +11,39 @@ navLinks.forEach(link => {
   });
 });
 
-// Mock form submission to keep the page static
+// Live contact form submission
 const contactForm = document.querySelector('.contact-form');
-contactForm?.addEventListener('submit', evt => {
+const formStatus = contactForm?.querySelector('.form-status');
+contactForm?.addEventListener('submit', async evt => {
   evt.preventDefault();
-  contactForm.reset();
-  alert('Thank you! Our team will respond with a tailored quote.');
+
+  if (!formStatus) return;
+
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const formData = new FormData(contactForm);
+  formStatus.textContent = 'Sending your request...';
+  submitButton?.setAttribute('disabled', 'true');
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json'
+      },
+      body: formData
+    });
+
+    if (response.ok) {
+      contactForm.reset();
+      formStatus.textContent = 'Thank you! Your message has been sent to Sales@highmilessolutions.ca.';
+    } else {
+      formStatus.textContent = 'Something went wrong. Please try again or email Sales@highmilessolutions.ca directly.';
+    }
+  } catch (error) {
+    formStatus.textContent = 'Network error. Please try again or email Sales@highmilessolutions.ca directly.';
+  } finally {
+    submitButton?.removeAttribute('disabled');
+  }
 });
 
 // Mobile navigation drawer
