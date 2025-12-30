@@ -502,6 +502,12 @@ a {
   box-shadow: 0 10px 20px rgba(211, 47, 47, 0.35);
 }
 
+.contact-form .form-status {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .contact-points {
   list-style: none;
   padding: 0;

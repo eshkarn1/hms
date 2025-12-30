@@ -69,34 +69,38 @@
             <li>🌐 Multilingual support</li>
           </ul>
         </div>
-        <form class="contact-form">
+        <form class="contact-form" action="https://formsubmit.co/ajax/Sales@highmilessolutions.ca" method="POST">
+          <input type="hidden" name="_subject" value="New contact request from High Miles Solutions" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
           <div class="row">
             <label>Name
-              <input type="text" placeholder="Your full name" required />
+              <input type="text" name="name" placeholder="Your full name" required />
             </label>
             <label>Email
-              <input type="email" placeholder="you@example.com" required />
+              <input type="email" name="email" placeholder="you@example.com" required />
             </label>
           </div>
           <div class="row">
             <label>Service Needed
-              <select required>
+              <select name="service" required>
                 <option value="" disabled selected>Select an option</option>
-                <option>Airport Transfer</option>
-                <option>Multi-Day Charter</option>
-                <option>Customized Itinerary</option>
-                <option>Group Transportation</option>
-                <option>Other</option>
+                <option value="Airport Transfer">Airport Transfer</option>
+                <option value="Multi-Day Charter">Multi-Day Charter</option>
+                <option value="Customized Itinerary">Customized Itinerary</option>
+                <option value="Group Transportation">Group Transportation</option>
+                <option value="Other">Other</option>
               </select>
             </label>
             <label>Travel Dates
-              <input type="text" placeholder="e.g., May 10–15" />
+              <input type="text" name="travel_dates" placeholder="e.g., May 10–15" />
             </label>
           </div>
           <label>Details
-            <textarea rows="4" placeholder="Tell us about your trip"></textarea>
+            <textarea name="details" rows="4" placeholder="Tell us about your trip" required></textarea>
           </label>
           <button type="submit">Send Message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
